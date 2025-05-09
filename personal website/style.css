@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  color: #333;
+  animation: backgroundScroll 10s infinite linear;
+}
+
+@keyframes backgroundScroll {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  background: #6a1b9a;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fbc2eb;
+}
+
+.home, .certificates, .profiles {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px #6a1b9a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid img {
+  width: 100%;
+  border: 2px solid #6a1b9a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+}
+
+.profiles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profiles li {
+  margin: 1rem 0;
+}
+
+.profile-links a {
+  color: #6a1b9a;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.profile-links a:hover {
+  transform: scale(1.05);
+  color: #f06292;
+}
