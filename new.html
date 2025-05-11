@@ -928,18 +928,18 @@
             });
         });
 
-        // Active Navigation Link on Scroll
+        
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('.section');
-            const navLinksActive = document.querySelectorAll('.nav-link'); // Renamed to avoid conflict with outer scope 'navLinks'
+            const navLinksActive = document.querySelectorAll('.nav-link'); 
             
             let current = '';
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                // const sectionHeight = section.clientHeight; // This variable is declared but not used, can be removed if not needed.
+                 
                 
-                if (window.scrollY >= (sectionTop - 300)) { // Used window.scrollY instead of just scrollY for clarity and consistency
+                if (window.scrollY >= (sectionTop - 300)) { 
                     current = section.getAttribute('id');
                 }
             });
@@ -949,6 +949,6 @@
                 if (link.getAttribute('href') === `#${current}` || (current === '' && link.getAttribute('href') === '#home')) {
                     link.classList.add('active');
                 }
-            }); // This was the missing closing parenthesis for the forEach loop
-        }); // This was the missing closing parenthesis and semicolon for the event listener
+            }); 
+        });  
 </script>
